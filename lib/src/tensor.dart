@@ -34,9 +34,9 @@ class Tensor {
 
   /// Underlying data buffer as bytes.
     Uint8List get data {
-    final data = cast<Uint8>(tfliteBinding.TfLiteTensorData(_tensor));
+    final data = cast<Uint8>(tfLiteTensorData(_tensor));
     return data
-        .asTypedList(tfliteBinding.TfLiteTensorByteSize(_tensor))
+        .asTypedList(tfLiteTensorByteSize(_tensor)))
         .asUnmodifiableView();
   }
 

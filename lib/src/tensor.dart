@@ -36,7 +36,7 @@ class Tensor {
     Uint8List get data {
     final data = cast<Uint8>(tfLiteTensorData(_tensor));
     return data
-        .asTypedList(tfLiteTensorByteSize(_tensor)))
+        .asTypedList(tfLiteTensorByteSize(_tensor))
         .asUnmodifiableView();
   }
 
